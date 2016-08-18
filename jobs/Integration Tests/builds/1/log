@@ -1,0 +1,18 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/jobs/Integration Tests/workspace
+Cloning the remote Git repository
+Cloning repository https://github.com/cesarvr/micro_service.git
+ > git init /var/lib/jenkins/jobs/Integration Tests/workspace # timeout=10
+Fetching upstream changes from https://github.com/cesarvr/micro_service.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username cesarv01@gmail.com # timeout=10
+ > git config --local credential.helper store --file=/tmp/git8947204353879199655.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/cesarvr/micro_service.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+Build was aborted
+Aborted by [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Recording test results
+ERROR: Step ‘Publish JUnit test result report’ failed: No test report files were found. Configuration error?
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mFinished: ABORTED

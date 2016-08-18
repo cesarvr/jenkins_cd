@@ -1,0 +1,46 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/jobs/testing-nodejs/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cesarvr/micro_service.git # timeout=10
+Fetching upstream changes from https://github.com/cesarvr/micro_service.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username cesarv01@gmail.com # timeout=10
+ > git config --local credential.helper store --file=/tmp/git6260371757055169596.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/cesarvr/micro_service.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 4dd835c2a627a77145ad3820235de47bd7ce581a (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 4dd835c2a627a77145ad3820235de47bd7ce581a
+ > git rev-list 4dd835c2a627a77145ad3820235de47bd7ce581a # timeout=10
+[EnvInject] - Executing scripts and injecting environment variables after the SCM step.
+[EnvInject] - Injecting as environment variables the properties content 
+MONGO_URL=mongodb://user:user@172.30.204.66:27017/sampledb
+
+[EnvInject] - Variables injected successfully.
+[MongoDB] Executing mongodb start command: [/var/lib/jenkins/tools/org.jenkinsci.plugins.mongodb.MongoDBInstallation/mongodb/bin/mongod, --logpath, /var/lib/jenkins/jobs/testing-nodejs/workspace/mongodb.log, --dbpath, /var/lib/jenkins/jobs/testing-nodejs/workspace/data/db]
+$ /var/lib/jenkins/tools/org.jenkinsci.plugins.mongodb.MongoDBInstallation/mongodb/bin/mongod --logpath /var/lib/jenkins/jobs/testing-nodejs/workspace/mongodb.log --dbpath /var/lib/jenkins/jobs/testing-nodejs/workspace/data/db
+[MongoDB] Starting...
+[MongoDB] Starting...
+[MongoDB] Starting...
+[MongoDB] MongoDB running at:http://localhost:27017
+[workspace] $ /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/node /tmp/hudson4496379469373799906.js
+build number =>  31
+path =>  /var/lib/jenkins/jobs/testing-nodejs/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson5203480656486073989.sh
++ npm install
+npm WARN example@1.0.0 No repository field.
++ npm test
+
+> example@1.0.0 test /var/lib/jenkins/jobs/testing-nodejs/workspace
+> mocha --recursive -R xunit test/dao/common > report/test-reports.xml
+
+[MongoDB] Will not kill mongodb process as it is already dead.
+Build was aborted
+Aborted by [8mha:AAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/dLi1CL9xLz8vMrc/NJiAJjzDjjEAAAA[0manonymous
+Recording test results
+Finished: ABORTED

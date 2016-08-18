@@ -1,0 +1,23 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Building in workspace /var/lib/jenkins/jobs/testing-nodejs/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cesarvr/micro_service.git # timeout=10
+Fetching upstream changes from https://github.com/cesarvr/micro_service.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username cesarv01@gmail.com # timeout=10
+ > git config --local credential.helper store --file=/tmp/git2514006593971827102.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/cesarvr/micro_service.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 714b88ed6aa5fc39ecf5e330e4a84b7ebcae6ccb (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 714b88ed6aa5fc39ecf5e330e4a84b7ebcae6ccb
+ > git rev-list 714b88ed6aa5fc39ecf5e330e4a84b7ebcae6ccb # timeout=10
+[workspace] $ /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/node /tmp/hudson7017615843555422489.js
+[workspace] $ /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/node /tmp/hudson8955483258564789643.js
+build number:  2
+path:  /var/lib/jenkins/jobs/testing-nodejs/workspace
+Finished: SUCCESS

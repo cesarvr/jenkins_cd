@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.18">
+  <suites>
+    <suite>
+      <file>/var/lib/jenkins/jobs/building and deployment/workspace/report/test-integration-reports.xml</file>
+      <name>Mocha Tests</name>
+      <duration>4.078</duration>
+      <timestamp>Wed, 17 Aug 2016 08:40:43 GMT</timestamp>
+      <time>4.078</time>
+      <cases>
+        <case>
+          <duration>2.021</duration>
+          <className>express rest api server</className>
+          <testName>post object</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.</errorStackTrace>
+          <failedSince>6</failedSince>
+        </case>
+        <case>
+          <duration>2.003</duration>
+          <className>express rest api server</className>
+          <testName>retrieves an object</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.
+Error: timeout of 2000ms exceeded. Ensure the done() callback is being called in this test.</errorStackTrace>
+          <failedSince>6</failedSince>
+        </case>
+        <case>
+          <duration>0.0</duration>
+          <className>express rest api server</className>
+          <testName>retrieves a collection</testName>
+          <skipped>false</skipped>
+          <errorStackTrace>Cannot read property &apos;body&apos; of undefined
+TypeError: Cannot read property &apos;body&apos; of undefined
+    at test/integration/integration.js:16:26
+    at Request.callback (node_modules/superagent/lib/node/index.js:587:12)
+    at ClientRequest.&lt;anonymous&gt; (node_modules/superagent/lib/node/index.js:539:10)
+    at Socket.socketErrorListener (_http_client.js:308:9)
+    at connectErrorNT (net.js:1015:8)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)</errorStackTrace>
+          <failedSince>6</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>4.078</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>

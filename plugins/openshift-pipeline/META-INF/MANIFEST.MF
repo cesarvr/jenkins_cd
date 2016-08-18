@@ -1,0 +1,23 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: gmontero
+Build-Jdk: 1.8.0_91
+Extension-Name: openshift-pipeline
+Specification-Title: This project provides a plugin into Jenkins which
+  facilitates the construction of jobs, pipelines, and workflows that 
+ operate on a Kubernetes based OpenShift server.
+Specification-Vendor: Red Hat, Inc
+Implementation-Vendor: Red Hat, Inc
+Implementation-Title: openshift-pipeline
+Implementation-Version: 1.0.13
+Group-Id: com.openshift.jenkins
+Short-Name: openshift-pipeline
+Long-Name: OpenShift Pipeline Jenkins Plugin
+Url: https://wiki.jenkins-ci.org/display/JENKINS/OpenShift+Pipeline+Pl
+ ugin
+Plugin-Version: 1.0.13
+Hudson-Version: 1.580.1
+Jenkins-Version: 1.580.1
+Plugin-Developers: Gabe Montero:gmontero:gmontero@redhat.com
+

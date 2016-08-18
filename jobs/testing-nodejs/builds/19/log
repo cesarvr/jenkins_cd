@@ -1,0 +1,37 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+[EnvInject] - Loading node environment variables.
+Building in workspace /var/lib/jenkins/jobs/testing-nodejs/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cesarvr/micro_service.git # timeout=10
+Fetching upstream changes from https://github.com/cesarvr/micro_service.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username cesarv01@gmail.com # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5885365654712405881.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/cesarvr/micro_service.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 15915971431035f6f9686f64e3b08c4895def928 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 15915971431035f6f9686f64e3b08c4895def928
+ > git rev-list 15915971431035f6f9686f64e3b08c4895def928 # timeout=10
+[EnvInject] - Executing scripts and injecting environment variables after the SCM step.
+[EnvInject] - Injecting as environment variables the properties content 
+MONGO_URL=mongodb://user:user@172.30.204.66:27017/sampledb
+
+[EnvInject] - Variables injected successfully.
+[workspace] $ /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/node /tmp/hudson1962291595205767586.js
+build number =>  19
+path =>  /var/lib/jenkins/jobs/testing-nodejs/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson7800978399770259073.sh
++ npm install
+npm WARN example@1.0.0 No repository field.
++ npm test
+
+> example@1.0.0 test /var/lib/jenkins/jobs/testing-nodejs/workspace
+> mocha --recursive -R xunit test/dao/common > report/test-reports.xml
+
+Recording test results
+Finished: SUCCESS

@@ -1,0 +1,67 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Building in workspace /var/lib/jenkins/jobs/testing-nodejs/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cesarvr/micro_service.git # timeout=10
+Fetching upstream changes from https://github.com/cesarvr/micro_service.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username cesarv01@gmail.com # timeout=10
+ > git config --local credential.helper store --file=/tmp/git5733828795653059305.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/cesarvr/micro_service.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 3f6d4528ac5ac58a40dbcd784ff95a9991008026 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 3f6d4528ac5ac58a40dbcd784ff95a9991008026
+ > git rev-list 1b6d98b93f9a93a524ff949e3266a7819aa82a78 # timeout=10
+[workspace] $ /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/node /tmp/hudson4467785946055215556.js
+build number =>  6
+path =>  /var/lib/jenkins/jobs/testing-nodejs/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson1724526754745616191.sh
++ npm install
+npm WARN example@1.0.0 No repository field.
++ npm install mocha -g
+/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/mocha -> /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/lib/node_modules/mocha/bin/mocha
+/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/_mocha -> /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/lib/node_modules/mocha/bin/_mocha
+/var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/lib
+`-- mocha@3.0.2 
+  +-- browser-stdout@1.3.0 
+  +-- commander@2.9.0 
+  | `-- graceful-readlink@1.0.1 
+  +-- debug@2.2.0 
+  | `-- ms@0.7.1 
+  +-- diff@1.4.0 
+  +-- escape-string-regexp@1.0.5 
+  +-- glob@7.0.5 
+  | +-- fs.realpath@1.0.0 
+  | +-- inflight@1.0.5 
+  | | `-- wrappy@1.0.2 
+  | +-- inherits@2.0.1 
+  | +-- minimatch@3.0.3 
+  | | `-- brace-expansion@1.1.6 
+  | |   +-- balanced-match@0.4.2 
+  | |   `-- concat-map@0.0.1 
+  | +-- once@1.3.3 
+  | `-- path-is-absolute@1.0.0 
+  +-- growl@1.9.2 
+  +-- json3@3.3.2 
+  +-- lodash.create@3.1.1 
+  | +-- lodash._baseassign@3.2.0 
+  | | +-- lodash._basecopy@3.0.1 
+  | | `-- lodash.keys@3.1.2 
+  | |   +-- lodash._getnative@3.9.1 
+  | |   +-- lodash.isarguments@3.1.0 
+  | |   `-- lodash.isarray@3.0.4 
+  | +-- lodash._basecreate@3.0.3 
+  | `-- lodash._isiterateecall@3.0.9 
+  +-- mkdirp@0.5.1 
+  | `-- minimist@0.0.8 
+  `-- supports-color@3.1.2 
+    `-- has-flag@1.0.0 
+
++ MOCHA_FILE=./jenkins-test-results.xml
++ mocha test/dao/common --reporter mocha-junit-reporter
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

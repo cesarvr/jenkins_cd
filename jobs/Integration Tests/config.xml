@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Running integration test against the server.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.3">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/cesarvr/micro_service.git</url>
+        <credentialsId>e1a1e0ed-c589-44e7-ac78-1dc03b5bdee5</credentialsId>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>npm install
+./node_modules/.bin/mocha --reporter=xunit --reporter-options output=report/integration-reports.xml test/integration/</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.18">
+      <testResults>**/report/integration-reports.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
+  <buildWrappers>
+    <EnvInjectBuildWrapper plugin="envinject@1.92.1">
+      <info>
+        <propertiesContent>INTEGRATION_HOST=http://crud-node-6-node6-restful.apps.10.2.2.2.xip.io</propertiesContent>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+    </EnvInjectBuildWrapper>
+    <jenkins.plugins.nodejs.tools.NpmPackagesBuildWrapper plugin="nodejs@0.2.1">
+      <nodeJSInstallationName>node6</nodeJSInstallationName>
+    </jenkins.plugins.nodejs.tools.NpmPackagesBuildWrapper>
+  </buildWrappers>
+</project>

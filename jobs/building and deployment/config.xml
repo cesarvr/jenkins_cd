@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Builds and deploy the our node.js application.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <com.openshift.jenkins.plugins.pipeline.OpenShiftBuilder plugin="openshift-pipeline@1.0.13">
+      <apiURL>https://10.2.2.2:8443</apiURL>
+      <namespace>node6-restful</namespace>
+      <authToken>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJub2RlNi1yZXN0ZnVsIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4tbWV4NWoiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjFkM2NhMDBiLTY0MjItMTFlNi1iOGIwLTUyNTQwMDY1OWIyZSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpub2RlNi1yZXN0ZnVsOmRlZmF1bHQifQ.RgsoyEzRA0PRZki4W7YOos036BH0QKvfvfNo3UrABjknQQ_Af8BaK21IOUz3OjxXeNuRnKD99qPj5nPEiPJNJNiPRCvzmP-w__PqBJ8ldN08KdJXIIxaoCqPJMDWxsImSZQK4pgHzxtpgLg01__kyFSfVjijv1u9xibaC9MyHLOh1tGqr1RB9S8dv1M0cUxilXn6QR_2kJ54waw4S8egFQrzmf-wLteVohHF5HtbhBCOxZS924Ce3Uj66JIGBz5oovg-hSXZhEGyHVZNJT7DYMP0WJWCmgeDcOZweSUDNt_DVWLmXzXNBC5ki0EUI78CJtl4BcRp1NUWhz0v81R7Tg</authToken>
+      <verbose>true</verbose>
+      <bldCfg>crud-node-6</bldCfg>
+      <commitID></commitID>
+      <buildName></buildName>
+      <showBuildLogs>true</showBuildLogs>
+      <checkForTriggeredDeployments>true</checkForTriggeredDeployments>
+      <waitTime></waitTime>
+    </com.openshift.jenkins.plugins.pipeline.OpenShiftBuilder>
+    <com.openshift.jenkins.plugins.pipeline.OpenShiftDeployer plugin="openshift-pipeline@1.0.13">
+      <apiURL>https://10.2.2.2:8443</apiURL>
+      <namespace>node6-restful</namespace>
+      <authToken>eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJub2RlNi1yZXN0ZnVsIiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6ImRlZmF1bHQtdG9rZW4tbWV4NWoiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC5uYW1lIjoiZGVmYXVsdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjFkM2NhMDBiLTY0MjItMTFlNi1iOGIwLTUyNTQwMDY1OWIyZSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDpub2RlNi1yZXN0ZnVsOmRlZmF1bHQifQ.RgsoyEzRA0PRZki4W7YOos036BH0QKvfvfNo3UrABjknQQ_Af8BaK21IOUz3OjxXeNuRnKD99qPj5nPEiPJNJNiPRCvzmP-w__PqBJ8ldN08KdJXIIxaoCqPJMDWxsImSZQK4pgHzxtpgLg01__kyFSfVjijv1u9xibaC9MyHLOh1tGqr1RB9S8dv1M0cUxilXn6QR_2kJ54waw4S8egFQrzmf-wLteVohHF5HtbhBCOxZS924Ce3Uj66JIGBz5oovg-hSXZhEGyHVZNJT7DYMP0WJWCmgeDcOZweSUDNt_DVWLmXzXNBC5ki0EUI78CJtl4BcRp1NUWhz0v81R7Tg</authToken>
+      <verbose>true</verbose>
+      <depCfg>crud-node-6</depCfg>
+    </com.openshift.jenkins.plugins.pipeline.OpenShiftDeployer>
+  </builders>
+  <publishers/>
+  <buildWrappers>
+    <EnvInjectBuildWrapper plugin="envinject@1.92.1">
+      <info>
+        <propertiesContent>INTEGRATION_HOST= http://crud-node-6-node6-restful.apps.10.2.2.2.xip.io</propertiesContent>
+        <loadFilesFromMaster>false</loadFilesFromMaster>
+      </info>
+    </EnvInjectBuildWrapper>
+  </buildWrappers>
+</project>

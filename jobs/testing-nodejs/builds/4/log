@@ -1,0 +1,26 @@
+Started by user [8mha:AAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZu/dLi1CL9xJTczDwACG0V4sAAAAA=[0mJenkins Admin
+Building in workspace /var/lib/jenkins/jobs/testing-nodejs/workspace
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url https://github.com/cesarvr/micro_service.git # timeout=10
+Fetching upstream changes from https://github.com/cesarvr/micro_service.git
+ > git --version # timeout=10
+using .gitcredentials to set credentials
+ > git config --local credential.username cesarv01@gmail.com # timeout=10
+ > git config --local credential.helper store --file=/tmp/git3569253978421185839.credentials # timeout=10
+ > git -c core.askpass=true fetch --tags --progress https://github.com/cesarvr/micro_service.git +refs/heads/*:refs/remotes/origin/*
+ > git config --local --remove-section credential # timeout=10
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 1b6d98b93f9a93a524ff949e3266a7819aa82a78 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 1b6d98b93f9a93a524ff949e3266a7819aa82a78
+ > git rev-list 714b88ed6aa5fc39ecf5e330e4a84b7ebcae6ccb # timeout=10
+[workspace] $ /var/lib/jenkins/tools/jenkins.plugins.nodejs.tools.NodeJSInstallation/node6/bin/node /tmp/hudson2268928206525544039.js
+build number =>  4
+path =>  /var/lib/jenkins/jobs/testing-nodejs/workspace
+[workspace] $ /bin/sh -xe /tmp/hudson7309920177375884316.sh
++ npm install
+Process leaked file descriptors. See http://wiki.jenkins-ci.org/display/JENKINS/Spawning+processes+from+build for more information
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

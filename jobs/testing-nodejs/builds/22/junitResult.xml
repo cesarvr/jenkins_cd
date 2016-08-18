@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result plugin="junit@1.18">
+  <suites>
+    <suite>
+      <file>/var/lib/jenkins/jobs/testing-nodejs/workspace/report/test-reports.xml</file>
+      <name>Mocha Tests</name>
+      <duration>0.868</duration>
+      <timestamp>Wed, 17 Aug 2016 01:15:13 GMT</timestamp>
+      <time>0.868</time>
+      <cases>
+        <case>
+          <duration>0.003</duration>
+          <className>Testing DB Functions</className>
+          <testName>testing db#findById handling non-db case</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.001</duration>
+          <className>Testing DB Functions</className>
+          <testName>testing db#findById handling empty parameters case</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.186</duration>
+          <className>Testing DB Functions</className>
+          <testName>testing db#create with empty id should generate an error.</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.012</duration>
+          <className>Testing DB Functions</className>
+          <testName>testing db#findById</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.047</duration>
+          <className>Testing DB Functions</className>
+          <testName>testing db#exist</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>0.027</duration>
+          <className>Testing DB Functions</className>
+          <testName>testing db#find</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>0.868</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>
