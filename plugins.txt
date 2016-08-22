@@ -1,0 +1,7 @@
+nodejs:0.2.1
+openshift-pipeline:1.0.21
+openshift-sync:0.0.12
+pipeline-utility-steps:1.1.6
+github-oauth:0.24
+build-environment:1.6
+plain-credentials:1.2
